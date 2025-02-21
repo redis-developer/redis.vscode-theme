@@ -1,0 +1,27 @@
+{
+  "name": "redis-vscode-theme",
+  "displayName": "redis.vscode-theme",
+  "description": "This is the official VS Code theme for Redis, using the brand colors",
+  "repository": {
+    "url": "https://github.com/redis-developer/redis.vscode-theme"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "deploy": "bun . && mkdir -p $HOME/.vscode/extensions/redis.vscode-theme && cp -r ./themes package.json $HOME/.vscode/extensions/redis.vscode-theme"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "redis-theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/redis-color-theme.json"
+      }
+    ]
+  }
+}
